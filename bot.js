@@ -1,3 +1,15 @@
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Bot Mineflayer dang hoat dong!');
+});
+
+app.listen(port, () => {
+  console.log(`Cong web dang mo tai port: ${port}`);
+});
+
 const mineflayer = require('mineflayer');
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 const GoalBlock = goals.GoalBlock;
@@ -6,7 +18,7 @@ const vec3 = require('vec3');
 const config = {
     host: '163.5.201.10',         
     port: 14794,                  
-    username: 'Bot_Di_Chuyen',   
+    username: 'Bot_Mineflayer',   
     version: '1.21.11'            
 };
 
